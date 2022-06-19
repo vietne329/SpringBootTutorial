@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.vietmd</groupId>
+	<artifactId>tomcat_deployment</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>tomcat_deployment</name>
+	<description>Demo project for Spring Boot</description>
+
+<!--	We have to update the packaging JAR into WAR using the following pieces of code −-->
+<!--	For Maven, add the packaging as WAR in pom.xml as shown below −-->
+	<packaging>war</packaging>
+
+	<properties>
+		<java.version>17</java.version>
+<!--	In Spring Boot, we need to mention the main class that should start in the build file. For this purpose, you can use the following pieces of code −-->
+<!--	For Maven, add the start class in pom.xml properties as shown below −-->
+		<start-class>com.vietmd.tomcat_deployment.TomcatDeploymentApplication</start-class>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
